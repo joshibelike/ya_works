@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="text-center mb-4">Оформление каюты</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Параметр</th>
+                    <th scope="col">Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Пол</td>
+                    <td>
+                        {% if gender == 'male' %}
+                            Мужской
+                        {% else %}
+                            Женский
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Возраст</td>
+                    <td>{{ age }} лет</td>
+                </tr>
+                <tr>
+                    <td>Цвет стен</td>
+                    <td style="background-color: {{ wall_color }}; color: #000; font-weight: bold;">
+                        {{ wall_color }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Марсианин</td>
+                    <td>
+                        <div class="text-center">
+                            <img src="{{ url_for('static', filename='img/' + alien_image) }}"
+                                 class="img-fluid"
+                                 alt="{{ alien_status }}"
+                                 style="max-height: 150px; border-radius: 10px;">
+                            <div class="mt-2">{{ alien_status }}</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-4 text-center">
+        <a href="/" class="btn btn-outline-light">Вернуться на главную</a>
+    </div>
+{% endblock %}
