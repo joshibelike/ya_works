@@ -1,0 +1,14 @@
+body {
+    background-color: #f5f0eb;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #d35400;
+    font-family: 'Georgia', serif;
+}

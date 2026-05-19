@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        .mars-header {
+            text-align: center;
+            padding: 40px 0 20px 0;
+            border-bottom: 2px solid #e74c3c;
+            margin-bottom: 30px;
+        }
+        .mars-header h1 {
+            color: #e74c3c;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+        }
+        .mars-header h4 {
+            color: #f39c12;
+            font-style: italic;
+        }
+        .content-block {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #888;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mars-header">
+            <h1>Миссия Колонизация Марса</h1>
+            <h4>И на Марсе будут яблони цвести!</h4>
+        </div>
+
+        <div class="content-block">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Марсианская программа</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
