@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="text-center mb-4">Размещение по каютам</h2>
+
+    <div class="list-group">
+        {% set cabin = "Каюта №" %}
+        {% for astronaut in astronauts %}
+            <div class="list-group-item">
+                {{ astronaut }} - {{ cabin }}{{ loop.index }}
+                {% if loop.first %}
+                    - капитан корабля
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="mt-4">
+        <a href="/" class="btn btn-secondary">Вернуться на главную</a>
+    </div>
+{% endblock %}
